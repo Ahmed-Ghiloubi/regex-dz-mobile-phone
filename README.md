@@ -18,3 +18,11 @@ reg.test("00213660123456"); // true
 reg.test("+213660123456"); // true
 
 ```
+
+```php
+if(preg_match_all('/(00213|\+213|0)(5|6|7)[0-9]{8}/',$number,$matches)){
+        foreach($matches[0] as $num){
+            $num = preg_replace('/\+213/','0',$num);
+            echo $num; 
+        }
+```
